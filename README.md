@@ -1,3 +1,3 @@
-# base
+# pre-commit hooks
 
-Base repo for creating other repos with default configuration files for PremiScale, Inc.
+A collection of organization-maintained pre-commit hooks.
