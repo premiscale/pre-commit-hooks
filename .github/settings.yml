@@ -1,4 +1,4 @@
-_extends: .github/.github/settings.yml
+_extends: .github
 
 repository:
   name: pre-commit-hooks
