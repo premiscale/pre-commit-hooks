@@ -1,4 +1,4 @@
-- id: add-msg-issue-prefix
+- id: msg-issue-prefix
   name: Add branch name as commit message prefix
   description: Prefixes the commit message with the branch name
   entry: hooks/prepare-git-commit-msg.sh
