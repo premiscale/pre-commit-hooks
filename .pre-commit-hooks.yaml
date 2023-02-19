@@ -3,5 +3,6 @@
   description: Prefixes the commit message with the branch name
   entry: hooks/prepare-git-commit-msg.sh
   language: script
-  stages: [prepare-commit-msg]
+  stages:
+    - prepare-commit-msg
   always_run: true
