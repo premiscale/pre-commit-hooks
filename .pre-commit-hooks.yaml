@@ -6,3 +6,11 @@
   stages:
     - prepare-commit-msg
   always_run: true
+- id: cloud-init-schema
+  name: Validate cloud-init scripts' schema
+  description: Validates a cloud-init script
+  entry: hooks/cloud-init-schema.sh
+  language: yaml
+  stages:
+    - pre-commit
+  always_run: false
