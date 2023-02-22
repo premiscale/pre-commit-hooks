@@ -12,7 +12,5 @@
   description: Validates a cloud-init script
   entry: hooks/cloud-init-schema.sh
   language: script
-  stages:
-    - pre-commit
   always_run: false
   fail_fast: true
