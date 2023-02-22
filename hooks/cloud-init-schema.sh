@@ -11,8 +11,9 @@ if ! command -v mapfile >/dev/null; then
     exit 1
 fi
 
-mapfile -t files < <(find "$1" -type f -name "*.ya?ml")
+DIR="$1"
+mapfile -t _files < <(find "$DIR" -type f -name "*.ya?ml")
 
-for cfg in "${files[@]}"; do
+for cfg in "${_files[@]}"; do
     cloud-init schema --config-file "$cfg"
 done
