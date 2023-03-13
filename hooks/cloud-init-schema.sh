@@ -6,11 +6,6 @@ if ! command -v cloud-init >/dev/null; then
     exit 1
 fi
 
-if ! command -v mapfile >/dev/null; then
-    printf "ERROR: must upgrade 'bash', command 'mapfile' not found.\\n" >&2
-    exit 1
-fi
-
 for cfg in "$@"; do
     if ! cloud-init schema --config-file "$cfg"; then
         exit "$?"
