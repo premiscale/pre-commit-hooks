@@ -8,6 +8,6 @@ fi
 
 for cfg in "$@"; do
     if ! cloud-init schema --config-file "$cfg"; then
-        exit "$?"
+        exit 1
     fi
 done
