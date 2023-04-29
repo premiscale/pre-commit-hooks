@@ -1,6 +1,6 @@
 - id: msg-issue-prefix
   name: Add branch name as commit message prefix
-  description: Prefixes the commit message with the branch name
+  description: Prefix the commit message with the branch name
   entry: hooks/prepare-git-commit-msg.sh
   language: script
   stages:
@@ -8,9 +8,17 @@
   always_run: true
   fail_fast: true
 - id: cloud-init-schema
-  name: Validate cloud-init scripts' schema
-  description: Validates a cloud-init script
+  name: cloud-init config validate
+  description: Validate a cloud-init script's schema
   entry: hooks/cloud-init-schema.sh
   language: script
   always_run: false
   fail_fast: true
+- id: gunicorn-config-schema
+  name: Gunicorn config validate
+  description: Validate a gunicorn configuration script
+  entry: hooks/gunicorn-config-validate.sh
+  language: script
+  always_run: false
+  fail_fast: true
+  files: ^gunicorn.conf.py$

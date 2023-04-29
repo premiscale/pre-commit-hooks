@@ -3,5 +3,7 @@
   "author": "emma@premiscale.com",
   "license": "GPLv3",
   "private": true,
-  "scripts": {}
+  "scripts": {
+    "install:deps": "./scripts/dependencies.sh"
+  }
 }
