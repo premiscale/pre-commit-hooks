@@ -13,7 +13,6 @@ workflows:
     jobs:
       - dynamic/continue:
           context: circleci
-          auto-detect: true
 
       - general/github-release:
           context: github
